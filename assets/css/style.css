@@ -1,0 +1,384 @@
+body{
+    font-family: 'Bebas Neue', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Rowdies', sans-serif;
+background-image: url(../img/fondo.png);
+background-position: 80%;
+margin: 5%;
+opacity: 98%;
+
+
+}
+
+#page {
+    display: grid;
+    width: 100%;
+    height: 250px;
+    grid-template-areas:
+      "head head"
+      "nav  main"
+      "nav  foot";
+    grid-template-rows: 150px 500px 100px;
+    grid-template-columns: 170px 1fr;
+    
+  }
+
+  
+  #page > header {
+    grid-area: head;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    background-color: black;
+    border-radius: 20px;
+  }
+
+  header h1{
+    text-align: center;
+    color:white;
+
+  }
+  header p{
+    text-align: center;
+    color: white;
+  }
+
+  #page > nav {
+    grid-area: nav;
+    background-color: #B3B6B7;
+    border-radius: 20px;
+    width: 100%;
+    display: flex;
+    
+  }
+  nav ul {
+    width: 60%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  ul li {
+    width: 100%;
+    text-align: center;
+    list-style: none;
+  }
+  
+  
+  #page > main {
+    grid-area: main;
+    background-color: white;
+    border-radius: 20px;
+  }
+
+  main .container-cards{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .section-cards {
+    width: 30%;
+    border: 1px;
+    margin-top : 50px;
+  }
+
+  .img-cards {
+    width: 100%;
+  }
+  .img-cards img {
+    max-width: 100%;
+    border-radius: 5%;
+  }
+
+  .img-cards img:hover {filter: blur(5px);}
+  
+  .details-cards {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .details-cards button {
+    margin-top: 10px;
+    width: 40%;
+    padding: 6px;
+    font-size: 16px;
+    background-color: #1d65a0;
+    color: #fff;
+    border: 1px solid #1d65a0;
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }
+
+  #page > footer {
+    background-color: black; 
+    grid-area: foot;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    padding-top: 20px;
+    border-radius: 20px;
+  }
+  
+  .rrss{
+    margin-bottom: 1px;
+    font-size: 18px;
+  }
+
+  footer p{
+    margin: 0px;
+    padding: 10px;
+  }
+
+  @media (max-width: 992px) {
+    #page {
+      display: grid;
+      width: 100%;
+      height: 250px;
+      grid-template-areas:
+        "head head"
+        "nav  nav"
+        "main main"
+        "foot   foot";
+      grid-template-rows: 200px 50px 500px;
+      grid-template-columns: 50px 1fr;
+      
+    }
+  
+    
+    #page > header {
+      grid-area: head;
+      display: flex;
+      flex-direction: column; 
+      justify-content: center; 
+      background-color: black;
+      border-radius: 20px;
+    }
+  
+    header h1{
+      text-align: center;
+      color:white;
+    }
+    header p{
+      text-align: center;
+      color: white;
+    }
+  
+    #page > nav {
+      grid-area: nav;
+      background-color: #B3B6B7;
+      border-radius: 20px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      
+    }
+    nav ul {
+      flex-direction: row;
+      justify-content: end;
+      
+     }
+
+    ul li {
+      width: 100%;
+      text-align: center;
+      list-style: none;
+    }
+    
+    
+    #page > main {
+      grid-area: main;
+      background-color: white;
+      border-radius: 20px;
+    }
+  
+    main .container-cards{
+      margin-top: 5%;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .section-cards {
+      width: 30%;
+      border: 1px;
+      margin-top : 50px;
+    }
+  
+    .img-cards {
+      width: 100%;
+    }
+    .img-cards img {
+      max-width: 100%;
+      border-radius: 5%;
+    }
+
+    
+    .details-cards {
+      text-align: center;
+      margin-top: 10px;
+    }
+    
+    .details-cards button {
+      margin-top: 10px;
+      width: 40%;
+      padding: 6px;
+      font-size: 16px;
+      background-color: #1d65a0;
+      color: #fff;
+      border: 1px solid #1d65a0;
+      border-radius: 3px;
+      margin-bottom: 20px;
+    }
+  
+    #page > footer {
+      background-color: black; 
+      grid-area: foot;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #fff;
+      padding-top: 20px;
+      border-radius: 20px;
+    }
+    
+    .rrss{
+      margin-bottom: 1px;
+      font-size: 18px;
+    }
+  
+    footer p{
+      margin: 0px;
+      padding: 10px;
+    }
+
+
+  }
+
+
+
+
+
+  @media (max-width: 576px) {
+    body {
+      padding-top: 70px;
+    }
+  
+    #page {
+      width: 100%;
+      display: grid;
+      grid-template-areas:
+        "head head"
+        "nav nav"
+        "main main"
+        "main foot";
+      grid-template-rows: 100px 1fr 100px;
+      grid: template columns 10% 1fr;
+    }
+  
+    #page > header {
+      grid-area: head;
+      display: flex;
+      flex-direction: column; 
+      justify-content: center; 
+      background-color: black;
+      border-radius: 20px;
+    }
+  
+    header h1{
+      text-align: center;
+      color:white;
+    }
+    header p{
+      text-align: center;
+      color: white;
+    }
+  
+    #page > nav {
+      grid-area: nav;
+      background-color: #B3B6B7;
+      border-radius: 20px;
+      width: 100%;
+      display: flex;
+      
+    }
+    nav ul {
+     flex-direction: row;
+     justify-content: space-around;
+    }
+    ul li {
+      width: 40%;
+      text-align: center;
+      list-style: none;
+    }
+   
+    #page > main {
+      grid-area: main;
+      background-color: white;
+      border-radius: 20px;
+      height: 1200px;
+    }
+  
+    main .container-cards{
+      margin-top: 5%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: center;
+    
+    }
+    .section-cards {
+      width: 30%;
+      border: 1px;
+      margin-top : 50px;
+    }
+  
+    .img-cards {
+      width: 100%;
+      
+    }
+    .img-cards img {
+      max-width: 100%;
+      border-radius: 5%;
+    }
+    
+    .details-cards {
+      text-align: center;
+      margin-top: 10px;
+    }
+    
+    .details-cards button {
+      margin-top: 10px;
+      width: 40%;
+      padding: 6px;
+      font-size: 16px;
+      background-color: #1d65a0;
+      color: #fff;
+      border: 1px solid #1d65a0;
+      border-radius: 3px;
+      margin-bottom: 20px;
+    }
+  
+    #page > footer {
+      background-color: black; 
+      grid-area: foot;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #fff;
+      padding-top: 20px;
+      border-radius: 20px;
+      margin-top: 313%;
+    }
+    
+    .rrss{
+      margin-bottom: 1px;
+      font-size: 18px;
+    }
+  
+    footer p{
+      margin: 0px;
+      padding: 10px;
+    }
+  }
